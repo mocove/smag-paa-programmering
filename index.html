@@ -6,14 +6,54 @@
 	<title>Smag på programmering</title>
 </head>
 
+<body>
+	<h1>Smag på programmering</h1>
+	<div id="box"></div>
+</body>
+
 <script type="text/javascript">
 
+/* === IF EKSEMPEL ===
+var alder = prompt("Hvor gammel er du?");
 
+if (alder >= 18) {
+  writeToPage("Så er det fest!");
+} else {
+  writeToPage("Balloner og sodavand. Det er det.");
+}
+*/
+
+/* === BESKED EKSEMPEL ===
+
+var myFriends = [
+  {firstName: 'Martin',msg: 0},
+  {firstName: 'Ole',msg: 0},
+  {firstName: 'Jens',msg: 1},
+  {firstName: 'Poul',msg: 4},
+  {firstName: 'Anders',msg: 0}
+];
+
+
+//var myFriends = ["Martin", "Jens", "Peter"];
+
+for (var i = 0; i <= 10; i++) {
+  if(myFriends[i]['msg'] > 0) {
+   writeToPage(myFriends[i]['msg'] + " ulæste beskeder fra " + myFriends[i]['firstName'] + "." ); 
+  }
+}
+
+*/
+
+// SKRIV TIL SIDEN
+
+function writeToPage(txt) {
+  var newContent = document.createElement('p');
+  var newText = document.createTextNode(txt);
+  newContent.appendChild(newText);
+  document.getElementById('box').appendChild(newContent);
+}
 
 </script>
 
-<body>
-	<h1>Smag på programmering</h1>
-</body>
 
 </html>
